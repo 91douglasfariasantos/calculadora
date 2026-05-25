@@ -1,0 +1,93 @@
+:root {
+    --bg-color: #e0e5ec;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a3b1c6;
+    --text-color: #444;
+    --accent-color: #6d5dfc;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px var(--shadow-dark), 
+               -20px -20px 60px var(--shadow-light);
+    width: 320px;
+}
+
+.display {
+    background-color: var(--bg-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: inset 6px 6px 12px var(--shadow-dark), 
+                inset -6px -6px 12px var(--shadow-light);
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#current-operation {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#previous-operation {
+    font-size: 1rem;
+    color: #888;
+    height: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--bg-color);
+    box-shadow: 6px 6px 12px var(--shadow-dark), 
+                -6px -6px 12px var(--shadow-light);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                inset -4px -4px 8px var(--shadow-light);
+    transform: scale(0.95);
+}
+
+.btn-op { color: var(--accent-color); }
+.btn-equal { 
+    grid-row: span 2; 
+    height: 125px; 
+    border-radius: 30px; 
+    background-color: var(--accent-color);
+    color: white;
+}
+.btn-zero { grid-column: span 2; width: 125px; border-radius: 30px; }
+
+/* Responsividade para telas pequenas */
+@media (max-width: 350px) {
+    .calculator { width: 90%; }
+}
