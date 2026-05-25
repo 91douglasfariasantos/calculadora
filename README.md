@@ -30,6 +30,8 @@ A calculadora possui um design moderno com:
 - Botão de igualdade destacado
 - Operadores com cor personalizada
 
+<img src="https://github.com/91douglasfariasantos/calculadora/blob/main/img/readme.png?raw=true" alt="Calculadora Douglas" class="calculator-image">
+
 ## 📁 Estrutura do projeto
 
 ```bash
